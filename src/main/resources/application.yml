@@ -1,0 +1,49 @@
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${ALIYUN_API_KEY}
+      base-url: https://ws-xopj639nseo2qwi3.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      model-name: deepseek-v4.1-flash-1017
+      log-requests: true
+      log-responses: true
+
+    streaming-chat-model:
+      api-key: ${ALIYUN_API_KEY}
+      base-url: https://ws-xopj639nseo2qwi3.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      model-name: deepseek-v4.1-flash-1017
+      log-requests: true
+      log-responses: true
+
+    embedding-model:
+      api-key: ${ALIYUN_API_KEY}
+      base-url: https://ws-xopj639nseo2qwi3.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      model-name: qwen3.7-text-embedding-flash
+      log-requests: true
+      log-responses: true
+      max-segments-per-batch: 20
+
+  community:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    dev.langchain4j: debug
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 1
+
+  datasource:
+    username: root
+    password: ${MYSQL_PASSWORD}
+    url: jdbc:mysql://localhost:3307/volunteer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

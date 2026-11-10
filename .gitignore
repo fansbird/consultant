@@ -1,0 +1,16 @@
+# Maven 构建产物
+target/
+
+# IntelliJ IDEA / TRAE
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# 日志
+*.log
+logs/
+
+# 系统文件
+.DS_Store
+Thumbs.db
